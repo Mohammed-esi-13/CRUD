@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/crud.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+        rel="stylesheet">
+    <title> CRUDS </title>
+</head>
+<body>
+    <!-- Start header -->
+    <header>
+        <div class="container">
+            <h2> CRUDS </h2>
+            <p> Product Management System </p>
+        </div>
+    </header>
+    <!-- End header -->
+    <!-- Start inputs -->
+    <div class="inputs">
+        <div class="container">
+            <input placeholder="title" type="text" id="title">
+            <div class="operations">
+                <input onkeyup="getTotal()" placeholder="price" type="number" id="price">
+                <input onkeyup="getTotal()" placeholder="taxes" type="number" id="taxes">
+                <input onkeyup="getTotal()" placeholder="ads" type="number" id="ads">
+                <input onkeyup="getTotal()" placeholder="discount" type="number" id="discount">
+                <small id="total">  </small>
+            </div>
+            <input placeholder="count" type="text" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit"> create </button>
+        </div>
+    </div>
+    <!-- End inputs -->
+    <!-- Start outputs -->
+    <div class="outputs">
+        <div class="container">
+            <div class="seachBlock">
+                <input onkeyup="searchData(this.value)" type="text" placeholder="search" id="search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood(this.id)" id="SearchTitle"> Search By Title </button>
+                    <button onclick="getSearchMood(this.id)" id="SearchCategory"> Search By Category </button>
+                </div>
+            </div>
+            <div id="deleteAll">
+                
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- End outputs -->
+    <script src="JS/crud.js"></script>
+</body>
+</html>
